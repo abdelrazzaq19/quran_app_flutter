@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'UrQuran App',
-      debugShowCheckedModeBanner: false,
       // theme: ThemeData(textTheme: CustomTextTheme.theme),
       initialRoute: Routes.initialRoute,
       routes: Routes.routes,

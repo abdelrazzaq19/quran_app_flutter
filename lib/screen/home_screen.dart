@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'dart:convert';
 import 'dart:developer';
 import 'package:flutter/material.dart';
@@ -27,7 +29,9 @@ class _HomeScreenState extends State<HomeScreen> {
       );
       if (response.statusCode == 200) {
         final List<dynamic> json = jsonDecode(response.body);
-        final List<Surahs> chapters = json.map((e) => Surahs.fromJson(e)).toList();
+        final List<Surahs> chapters = json
+            .map((e) => Surahs.fromJson(e))
+            .toList();
         return chapters;
       } else {
         throw Exception('Failed to load chapters');
@@ -47,7 +51,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFE4F5E6), // Ubah warna latar belakang Scaffold
+      backgroundColor: const Color(
+        0xFFE4F5E6,
+      ), // Ubah warna latar belakang Scaffold
       body: SafeArea(
         child: RefreshIndicator(
           onRefresh: () async {
@@ -73,7 +79,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       const CircleAvatar(
                         backgroundColor: Color.fromARGB(255, 255, 187, 247),
                         radius: 24,
-                        child: Icon(Icons.person, color: Color.fromARGB(255, 230, 100, 247)),
+                        child: Icon(
+                          Icons.person,
+                          color: Color.fromARGB(255, 230, 100, 247),
+                        ),
                       ),
                       const SizedBox(width: 12),
                       Column(
@@ -81,11 +90,19 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           Text(
                             'Assalamu\'alaikum',
-                            // style: GoogleFonts.poppins(fontSize: 14, color: Colors.black54),
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                           Text(
-                            'Muhammad',
-                            // style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.bold),
+                            'Ziad',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ],
                       ),
@@ -123,7 +140,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         Row(
                           children: [
-                            const Icon(Icons.book, color: Colors.white, size: 20),
+                            const Icon(
+                              Icons.book,
+                              color: Colors.white,
+                              size: 20,
+                            ),
                             const SizedBox(width: 8),
                             Text(
                               'Last Read',
