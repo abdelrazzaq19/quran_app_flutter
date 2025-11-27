@@ -52,7 +52,7 @@ dev_dependencies:
 
   
 flutter_launcher_icons:
-  image_path: "assets/urquran.png"
+  image_path: "assets/icon makkah.png"
   android: true
   ios: true
 

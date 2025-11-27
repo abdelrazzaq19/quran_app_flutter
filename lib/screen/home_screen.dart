@@ -51,9 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(
-        0xFFE4F5E6,
-      ), // Ubah warna latar belakang Scaffold
+      backgroundColor: Colors.white, // Ubah warna latar belakang Scaffold
       body: SafeArea(
         child: RefreshIndicator(
           onRefresh: () async {
@@ -77,11 +75,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   Row(
                     children: [
                       const CircleAvatar(
-                        backgroundColor: Color.fromARGB(255, 255, 187, 247),
+                        backgroundColor: Colors.grey,
                         radius: 24,
                         child: Icon(
                           Icons.person,
-                          color: Color.fromARGB(255, 230, 100, 247),
+                          color: Colors.black
                         ),
                       ),
                       const SizedBox(width: 12),
@@ -122,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 244, 140, 245),
+                  color: Colors.grey,
                   borderRadius: BorderRadius.circular(16),
                   boxShadow: [
                     BoxShadow(
@@ -148,6 +146,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             const SizedBox(width: 8),
                             Text(
                               'Last Read',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
                               // style: GoogleFonts.poppins(color: Colors.white70, fontSize: 14),
                             ),
                           ],
@@ -155,17 +157,25 @@ class _HomeScreenState extends State<HomeScreen> {
                         const SizedBox(height: 8),
                         Text(
                           'Surah Al-Baqarah',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
                           // style: GoogleFonts.poppins(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
                         ),
                         Text(
                           'Ayat No: 1',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
                           // style: GoogleFonts.poppins(color: Colors.white, fontSize: 14),
                         ),
                       ],
                     ),
                     // Ganti dengan widget gambar atau ikon yang sesuai
                     Image.asset(
-                      'assets/images/urr.png', // Sesuaikan path ini
+                      'assets/images/alquran.png', // Sesuaikan path ini
                       height: 80,
                       fit: BoxFit.contain,
                     ),
@@ -178,8 +188,8 @@ class _HomeScreenState extends State<HomeScreen> {
               DefaultTabController(
                 length: 3,
                 child: TabBar(
-                  indicatorColor: const Color.fromARGB(255, 226, 97, 255),
-                  labelColor: const Color.fromARGB(255, 226, 97, 255),
+                  indicatorColor: Colors.blue,
+                  labelColor: Colors.black,
                   unselectedLabelColor: Colors.black54,
                   // labelStyle: GoogleFonts.poppins(fontWeight: FontWeight.bold),
                   tabs: const [
