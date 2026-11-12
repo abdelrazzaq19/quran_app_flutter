@@ -14,3 +14,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+##Hasil 
+
+<img width="1920" height="1080" alt="quran app (1)" src="https://github.com/user-attachments/assets/da0c9d40-d43c-4e66-9065-10791a64d917" />
